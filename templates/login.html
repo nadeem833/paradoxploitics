@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <title>Login</title>
+</head>
+<body>
+ <header>
+    <img src="/static/images/logo.jpg">
+    <nav class="nav">
+      <ul class="ul">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/totally-free">Totally Free</a></li>
+        <li><a href="/free-to-try">Free To Try</a></li>
+        <li><a href="/register" class="login-register">Login</a></li>
+      </ul>
+    </nav>
+    <div class="toggle" onclick="toggle();"></div>
+  </header>
+
+  <section class="form-box">
+    <img src="/static/images/gif.gif">
+    <h2>Login</h2>
+    <form id="login-form" action="/login" method="post">
+      <input type="text" placeholder="Username" name="username" required>
+      <input type="password" placeholder="Password" name="password" required>
+      <input type="submit" value="Login">
+    <div class="forgot-password">
+      <a href="forgot-password.html">Forgot your password?</a>
+    </div> 
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-first-column">
+      <div class="footer-text">
+        <div class="footer-about">
+          <h2>About</h2>
+          <p>Our goal is to provide a one-step destination for anyone to easily find all AI tools available on the internet.<br>We are a complete brand new start-up in BETA MODE</p>
+          <a href="#">Register</a>
+        </div>
+        <div class="footer-link">
+          <ul>
+            <li>Legal</li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Term of Use</a></li>
+          </ul>
+          <ul>
+            <li>Contact Us</li>
+            <li><a href="#">info@ai-freetools.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr style="background-color: #fff; height: 2px;">
+    <div class="footer-second-column">
+      <p>&copy; 2023 Copyright Reserved: AI-FreeTools.com</p>
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
