@@ -41,7 +41,6 @@ def upload_tools():
             'filename': tool.filename,
             'created_at': tool.created_at
         })
-    print('tools=================:', tool_data)
     return render_template('upload.html', tools=tool_data)
 
 
@@ -52,15 +51,14 @@ def login():
         username = request.form['username']
         password = request.form['password']
         # Query the database to find a user with the provided username and password
-        user = User.query.filter_by(name=username, password=password).first()
-        if user:
+        user = User.query.filter_by(email=username, password=password).first()
+        if user is None:
+            return ('Invalid username or password.')
+            # return render_template('login.html', error=error_message)
             # Authentication successful, redirect to index page
-            # return render_template('dashboard.html')
-            print('login successful')
         else:
             # Authentication failed, show an error message
-            error_message = 'Invalid username or password.'
-            return render_template('login.html', error=error_message)
+            return render_template('index.html')
 
     # If it's a GET request, simply render the login page
     return render_template('login.html')
