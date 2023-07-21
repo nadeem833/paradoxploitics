@@ -2,3 +2,4 @@ Flask
 Flask-Migrate
 Werkzeug
 Flask-SQLAlchemy
+gunicorn
