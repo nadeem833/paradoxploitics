@@ -42,61 +42,20 @@
     </section>
   </div>
 
-  <div class="AI_USE">
-    <div class="use-list">
-      <h1 style="color:#00bcd4;">Why choose AI-Free Tools?</h1>
-      <ul>
-        <li><i class="fa-solid fa-check"></i>Extensive Collection: Find a vast array of totally free AI tools, covering
-          various domains and functionalities.</li>
-        <li><i class="fa-solid fa-check"></i>Simplified Discovery: Our user-friendly platform makes it easy to browse
-          and search for the specific tools you need.</li>
-        <li><i class="fa-solid fa-check"></i>Verified Quality: We ensure that all listed tools meet our high standards
-          for performance and reliability.</li>
-        <li><i class="fa-solid fa-check"></i>Regular Updates: Stay up-to-date with the latest and most innovative AI
-          tools, as we constantly refresh our collection.</li>
-        <li><i class="fa-solid fa-check"></i>Engage with the Community: Join a vibrant community of developers, share
-          experiences, and contribute to the growing collection.</li>
-        <li><i class="fa-solid fa-check"></i>Unlock the potential of AI without any cost barriers.</li>
-      </ul>
-      <p>Visit AI-Free Tools and explore the world of totally free AI tools today! Welcome to AI-Free Tools - where
-        innovation meets affordability.</p>
-    </div>
-    <div class="ai-image">
-      <img src="/static/images/developer at work.jpg">
-    </div>
-  </div>
 
   <hr style="background-color:#000; height: 3px; width: 95%; margin: auto;">
-  <!-- 
-  <div class="benefits">
-    <h3>BENEFITS</h3>
-    <h1 style="color:orange; margin:25px 0;">Exposure and Connections <br> are The Keys to Growth</h1>
 
-    <p>Gain exposure.  
-    Increase visibility. <br>
-    Reach a wider audience</p>
-
-    <p>Connect with Like Minded Professionals. <br>
-    Collaborate</p>
-
-    <p>Analytics and insights for listed tools</p>
-
-    <h2 style="margin-top: 50px;">Upload Your AI Tool</h2>
-    <div class="btn-container">
-      <a class="button" href="/totally-free">Totally Free</a>
-      <a class="button" href="/free-to-try">Free to Try</a>
-    </div>
-  </div> -->
-
-  <hr style="background-color:#000; height: 3px; width: 95%; margin: auto;">
+  <h1 style="color:#00bcd4; text-align: center;">Uploaded AI Tools</h1>
 
   <div class="tool-listing">
+
     {% for tool in tools %}
     <div class="tool-card">
       <img src="static/uploads/{{ tool.filename}}">
-      <h3>tool name: {{ tool.tool_name }}</h3>
-      <h3>tool description: {{ tool.description }}<h3>
-          <h3>Author: {{ tool.author }}<h3>
+      <h3><span class="highlight">Tool Name:</span> {{ tool.tool_name }}</h3>
+      <h3><span class="highlight">Tool Description:</span> {{ tool.description }}<h3>
+        <h3><span class="highlight">Author:</span> {{ tool.author }}<h3>
+            <h3><span class="highlight">Type:</span> {{ tool.type }}<h3>
     </div>
     {% endfor %}
   </div>

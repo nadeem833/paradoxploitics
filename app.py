@@ -44,6 +44,7 @@ def upload_tools():
             'description': tool.description,
             'category': tool.category,
             'author': tool.author,
+            'type': tool.type,
             'tool_url': tool.tool_url,
             'tool_name': tool.tool_name,
             'filename': tool.filename,
