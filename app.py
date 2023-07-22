@@ -25,6 +25,14 @@ def index():
 def about():
     return render_template('about.html')
 
+@app.route('/privacy-policy')
+def privacy_policy():
+    return render_template('privacy_policy.html')
+
+@app.route('/terms-of-use')
+def terms_of_use():
+    return render_template('terms_of_use.html')
+
 
 @app.route('/upload-tools' , methods=['GET'])
 def upload_tools():

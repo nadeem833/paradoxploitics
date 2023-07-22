@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="/static/css/style.css">
 </head>
+
 <body>
   <header>
     <img src="/static/images/logo.jpg">
@@ -28,9 +32,12 @@
   <div class="container">
     <section>
       <h1>Welcome to <span>AI-Free Tools</span></h1>
-	  <div class="lorem-ipsum">
-        <h1>Resource directory to access <br>a wide range of <span>‘Completely Free’</span><br> and <span>free to try</span> AI tools <br>available on the internet.</h1>
-        <h3 style="color:#fff;"><span>Grow</span> Your <span>Exposure</span>.<br><br> <p style="font-size: 18px; font-weight: 400;">List Your Creative Tools Today.</p> </h3>
+      <div class="lorem-ipsum">
+        <h1>Resource directory to access <br>a wide range of <span>‘Completely Free’</span><br> and <span>free to
+            try</span> AI tools <br>available on the internet.</h1>
+        <h3 style="color:#fff;"><span>Grow</span> Your <span>Exposure</span>.<br><br>
+          <p style="font-size: 18px; font-weight: 400;">List Your Creative Tools Today.</p>
+        </h3>
       </div>
     </section>
   </div>
@@ -39,14 +46,20 @@
     <div class="use-list">
       <h1 style="color:#00bcd4;">Why choose AI-Free Tools?</h1>
       <ul>
-        <li><i class="fa-solid fa-check"></i>Extensive Collection: Find a vast array of totally free AI tools, covering various domains and functionalities.</li>
-        <li><i class="fa-solid fa-check"></i>Simplified Discovery: Our user-friendly platform makes it easy to browse and search for the specific tools you need.</li>
-        <li><i class="fa-solid fa-check"></i>Verified Quality: We ensure that all listed tools meet our high standards for performance and reliability.</li>
-        <li><i class="fa-solid fa-check"></i>Regular Updates: Stay up-to-date with the latest and most innovative AI tools, as we constantly refresh our collection.</li>
-        <li><i class="fa-solid fa-check"></i>Engage with the Community: Join a vibrant community of developers, share experiences, and contribute to the growing collection.</li>
+        <li><i class="fa-solid fa-check"></i>Extensive Collection: Find a vast array of totally free AI tools, covering
+          various domains and functionalities.</li>
+        <li><i class="fa-solid fa-check"></i>Simplified Discovery: Our user-friendly platform makes it easy to browse
+          and search for the specific tools you need.</li>
+        <li><i class="fa-solid fa-check"></i>Verified Quality: We ensure that all listed tools meet our high standards
+          for performance and reliability.</li>
+        <li><i class="fa-solid fa-check"></i>Regular Updates: Stay up-to-date with the latest and most innovative AI
+          tools, as we constantly refresh our collection.</li>
+        <li><i class="fa-solid fa-check"></i>Engage with the Community: Join a vibrant community of developers, share
+          experiences, and contribute to the growing collection.</li>
         <li><i class="fa-solid fa-check"></i>Unlock the potential of AI without any cost barriers.</li>
       </ul>
-      <p>Visit AI-Free Tools and explore the world of totally free AI tools today! Welcome to AI-Free Tools - where innovation meets affordability.</p>
+      <p>Visit AI-Free Tools and explore the world of totally free AI tools today! Welcome to AI-Free Tools - where
+        innovation meets affordability.</p>
     </div>
     <div class="ai-image">
       <img src="/static/images/developer at work.jpg">
@@ -54,7 +67,7 @@
   </div>
 
   <hr style="background-color:#000; height: 3px; width: 95%; margin: auto;">
-<!-- 
+  <!-- 
   <div class="benefits">
     <h3>BENEFITS</h3>
     <h1 style="color:orange; margin:25px 0;">Exposure and Connections <br> are The Keys to Growth</h1>
@@ -80,33 +93,34 @@
   <div class="tool-listing">
     {% for tool in tools %}
     <div class="tool-card">
-        <img src="static/uploads/{{ tool.filename}}">
-        <h3>tool name: {{ tool.tool_name }}</h3>
+      <img src="static/uploads/{{ tool.filename}}">
+      <h3>tool name: {{ tool.tool_name }}</h3>
       <h3>tool description: {{ tool.description }}<h3>
-    <h3>Author: {{ tool.author }}<h3>
+          <h3>Author: {{ tool.author }}<h3>
     </div>
     {% endfor %}
   </div>
-  
-  
+
+
 
   <footer>
     <div class="footer-first-column">
       <div class="footer-text">
         <div class="footer-about">
           <h2>About</h2>
-          <p>Our goal is to provide a one-step destination for anyone to easily find all AI tools available on the internet.<br>We are a brand new startup in BETA MODE</p>
-          <a href="#">Register</a>
+          <p>Our goal is to provide a one-step destination for anyone to easily find all AI tools available on the
+            internet.<br>We are a brand new startup in BETA MODE</p>
+          <a href="/register">Register</a>
         </div>
         <div class="footer-link">
           <ul>
             <li>Legal</li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Term of Use</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-use">Term of Use</a></li>
           </ul>
           <ul>
             <li>Contact Us</li>
-            <li><a href="#">info@ai-freetools.com</a></li>
+            <li><a href="mailto:info@ai-freetools.com">info@ai-freetools.com</a></li>
           </ul>
         </div>
       </div>
@@ -122,7 +136,7 @@
     </div>
   </footer>
 
-<script src="/static/js/script.js"></script>
+  <script src="/static/js/script.js"></script>
 </body>
-</html>
 
+</html>
