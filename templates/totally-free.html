@@ -11,6 +11,8 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <title>Totally Free - AI FREE TOOLS</title>
+
 </head>
 
 <body>
@@ -22,7 +24,7 @@
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><a href="/totally-free">Totally Free</a></li>
-        <li><a href="/upload-tools">Uploaded Tools</a></li>
+        <!-- <li><a href="/upload-tools">Uploaded Tools</a></li> -->
 
         <li><a href="/free-to-try">Free To Try</a></li>
         <li><a href="/register" class="login-register">Login</a></li>
@@ -85,6 +87,23 @@
       </div>
     </div>
   </section>
+  
+  <hr style="background-color:#000; height: 3px; width: 95%; margin: auto;">
+
+  <h1 style="color:#00bcd4; text-align: center;">Totally Free AI Tools</h1>
+
+  <div class="tool-listing">
+
+    {% for tool in tools %}
+    <div class="tool-card">
+      <img src="static/uploads/{{ tool.filename}}">
+      <h3><span class="highlight">Tool Name:</span> {{ tool.tool_name }}</h3>
+      <h3><span class="highlight">Tool Description:</span> {{ tool.description }}<h3>
+        <h3><span class="highlight">Author:</span> {{ tool.author }}<h3>
+            <h3><span class="highlight">Type:</span> {{ tool.type }}<h3>
+    </div>
+    {% endfor %}
+  </div>
 
   <footer>
     <div class="footer-first-column">

@@ -132,7 +132,20 @@ def totally_free():
         # Redirect back to the appropriate page
         return "Successfully uploaded your Tool"
 
-    return render_template("totally-free.html")
+    tools = Entry.query.filter_by(publish=True , type = 'totally_free').all()
+    tool_data = []
+    for tool in tools:
+        tool_data.append({
+            'description': tool.description,
+            'category': tool.category,
+            'author': tool.author,
+            'type': tool.type,
+            'tool_url': tool.tool_url,
+            'tool_name': tool.tool_name,
+            'filename': tool.filename,
+            'created_at': tool.created_at
+        })
+    return render_template("totally-free.html" , tools = tool_data)
 
 
 @app.route('/free-to-try', methods=['POST', 'GET'])
@@ -177,7 +190,20 @@ def free_to_try():
         # Redirect back to the appropriate page
         return "Successfully uploaded your free_to_try Tool"
 
-    return render_template("free-to-try.html")
+    tools = Entry.query.filter_by(publish=True , type = 'free_to_try').all()
+    tool_data = []
+    for tool in tools:
+        tool_data.append({
+            'description': tool.description,
+            'category': tool.category,
+            'author': tool.author,
+            'type': tool.type,
+            'tool_url': tool.tool_url,
+            'tool_name': tool.tool_name,
+            'filename': tool.filename,
+            'created_at': tool.created_at
+        })
+    return render_template("free-to-try.html" , tools = tool_data)
 
 
 @app.route('/contact', methods=['POST', 'GET'])
